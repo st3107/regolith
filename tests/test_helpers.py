@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+
 import pytest
 
 from regolith.main import main
@@ -297,9 +298,6 @@ def test_helper_python(hm, make_db, capsys):
     if are_outfiles and expecteddir.is_dir():
         assert_outputs(builddir, expecteddir)
 
-    builddir = repo / "db"
-    if expecteddir.is_dir():
-        assert_outputs(builddir, expecteddir)
 
 
 def assert_outputs(builddir, expecteddir):
